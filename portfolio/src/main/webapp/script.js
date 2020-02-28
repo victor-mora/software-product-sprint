@@ -31,6 +31,7 @@ function addRandomGreeting() {
 }
 
 /**
+ * week 1
  * Generates a URL for a random image in the images directory and adds an img
  * element with that URL to the page.
  */
@@ -50,6 +51,7 @@ function randomImage() {
 }
 
 /**
+ * week 2 step 2
  * Another way to use fetch is by using the async and await keywords. This
  * allows you to use the return values directly instead of going through
  * Promises.
@@ -58,4 +60,31 @@ async function getDataUsingAsyncAwait() {
   const response = await fetch('/data');
   const quote = await response.text();
   document.getElementById('data-container').innerText = quote;
+}
+
+/**
+ * week 2 step 3
+ * Fetches comments from the servers and adds them to the DOM.
+ */
+function getCommentList() {
+  fetch('/data').then(response => response.json()).then((comList) => {
+    // comList is an object, not a string, so we have to
+    // reference its fields to create HTML content
+
+    const comListElement = document.getElementById('data-container');
+    comListElement.innerHTML = '';
+    comListElement.appendChild(
+        createListElement(comList[0]));
+    comListElement.appendChild(
+        createListElement(comList[1]));
+    comListElement.appendChild(
+        createListElement(comList[2]));
+  });
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }
