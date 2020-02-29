@@ -72,13 +72,14 @@ function getCommentList() {
     // reference its fields to create HTML content
 
     const comListElement = document.getElementById('data-container');
-    comListElement.innerHTML = '';
-    comListElement.appendChild(
-        createListElement(comList[0]));
-    comListElement.appendChild(
-        createListElement(comList[1]));
-    comListElement.appendChild(
-        createListElement(comList[2]));
+    //comListElement.innerHTML = '';
+    //for (let i = 0; i < comList.keys().length; i++){
+    //comListElement.appendChild(
+    //    createListElement(comList[i]));
+    //}
+    comList.forEach((line) => {
+      comListElement.appendChild(createListElement(line));
+    });
   });
 }
 
