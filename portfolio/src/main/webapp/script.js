@@ -90,19 +90,19 @@ function createListElement(text) {
   return liElement;
 }
 
+/**
+ * week 3
+ * fetches translated comments (get request) and adds it to the DOM.
+ */
+
 /** Translates the comments and resends the GET request */
 function requestTranslation() {
-        //const text = document.getElementById('data-container').value;
         const languageCode = document.getElementById('languageCode').value;
         const dataContainer = document.getElementById('data-container');
-        //const resultContainer = document.getElementById('result');
         dataContainer.innerText = '';
-//console.log(languageCode);
-        const params = new URLSearchParams();
-        //params.append('text', text);
-        params.append('languageCode', languageCode);
 
-        //params = '/data?'.append(params.toString());
+        const params = new URLSearchParams();
+        params.append('languageCode', languageCode);
 
         fetch('/data?' + params.toString()).then(response => response.json()).then((comList) => {
     const comListElement = document.getElementById('data-container');
@@ -110,22 +110,14 @@ function requestTranslation() {
       comListElement.appendChild(createListElement(line));
     });
   });
-        
-        
-        //then(response => response.text())
-        //.then((translatedMessage) => {
-         // dataContainer.innerText = translatedMessage;
-       // });
+
       }
 
-//fetch('/data', {
-      //    method: 'get',
-      //    body: params
-      //  }).then(response => response.json())
 
 
 
 
 
 
-      //<button onclick="requestTranslation();">Translate</button>
+
+    

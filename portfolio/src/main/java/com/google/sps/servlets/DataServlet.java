@@ -54,10 +54,7 @@ public class DataServlet extends HttpServlet {
     for (Entity entity : results.asIterable()) {
       //long id = entity.getKey().getId();
       String text = (String) entity.getProperty("text");
-      
-      //long timestamp = (long) entity.getProperty("timestamp");
-//System.out.println(languageCode);
-//System.out.println(request.getQueryString());
+
     // Do the translation.
     Translate translate = TranslateOptions.getDefaultInstance().getService();
     Translation translation =
@@ -67,6 +64,8 @@ public class DataServlet extends HttpServlet {
       comments.add(translatedText);
     }
     Gson gson = new Gson();
+
+    response.setCharacterEncoding("UTF-8");
 
     response.setContentType("application/json;");
     response.getWriter().println(gson.toJson(comments));
