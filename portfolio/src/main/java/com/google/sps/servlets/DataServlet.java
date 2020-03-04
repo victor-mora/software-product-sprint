@@ -56,8 +56,8 @@ public class DataServlet extends HttpServlet {
       String text = (String) entity.getProperty("text");
       
       //long timestamp = (long) entity.getProperty("timestamp");
-System.out.println(languageCode);
-System.out.println(request.getQueryString());
+//System.out.println(languageCode);
+//System.out.println(request.getQueryString());
     // Do the translation.
     Translate translate = TranslateOptions.getDefaultInstance().getService();
     Translation translation =
