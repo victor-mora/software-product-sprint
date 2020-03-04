@@ -14,6 +14,9 @@
 
 package com.google.sps.servlets;
 
+import com.google.cloud.translate.Translate;
+import com.google.cloud.translate.TranslateOptions;
+import com.google.cloud.translate.Translation;
 import com.google.sps.data.Comment;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
@@ -41,23 +44,28 @@ public class DataServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     Query query = new Query("Comment").addSort("timestamp", SortDirection.DESCENDING);
-
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     PreparedQuery results = datastore.prepare(query);
 
-
-    //made list of string instead of list of comment
     List<String> comments = new ArrayList<>();
+
+    String languageCode = request.getParameter("languageCode");
+
     for (Entity entity : results.asIterable()) {
       //long id = entity.getKey().getId();
       String text = (String) entity.getProperty("text");
+      
       //long timestamp = (long) entity.getProperty("timestamp");
+System.out.println(languageCode);
+System.out.println(request.getQueryString());
+    // Do the translation.
+    Translate translate = TranslateOptions.getDefaultInstance().getService();
+    Translation translation =
+        translate.translate(text, Translate.TranslateOption.targetLanguage(languageCode));
+    String translatedText = translation.getTranslatedText();
 
-      //Comment comment = new Comment(id, text, timestamp);
-      //pass just text instead of comment object
-      comments.add(text);
+      comments.add(translatedText);
     }
-
     Gson gson = new Gson();
 
     response.setContentType("application/json;");
@@ -80,10 +88,12 @@ public class DataServlet extends HttpServlet {
 
     String text = request.getParameter("text-input");
     long timestamp = System.currentTimeMillis();
+    //String languageCode = request.getParameter("languageCode");
 
     Entity commentEntity = new Entity("Comment");
     commentEntity.setProperty("text", text);
     commentEntity.setProperty("timestamp", timestamp);
+   // commentEntity.setParameter("languageCode", languageCode);
 
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     datastore.put(commentEntity);

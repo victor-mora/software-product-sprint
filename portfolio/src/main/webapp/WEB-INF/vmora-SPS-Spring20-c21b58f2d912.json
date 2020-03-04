@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vmora-sps-spring20",
+  "private_key_id": "c21b58f2d912e965b2d2971e3764c89c5671cc3d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCUSiWsCAjuBOgP\njJJxCDcI5WO9cfH0eskdtkFcXKODENCres6alOWddKsgVuhMzbzVHgvOOkkE006s\nDhh2qWsK6UT8SoVEl5N7UF5FdlK9s4R55f/whWIXHzI2MD9iSp/KyplJqMbWtdqK\n+mprEZmPt1FpfSnaG0L8uchNfUVS5BjIQCDJRiZx7vwme9HMW3d0JRDS+ZQL0JPR\nlWJbJFxq6vygPb6vAP2vVsWp9VRvCJhQz9pT/4mPDWaSaag6HjbbobooG3elSP1X\nBz2PylzfxigFsYP5LN/XVcWnURNp7KIli6y2VNq8m04QIXUmHejXuVjhb9WY0Sy1\nn5bTPgh7AgMBAAECggEAIEom+tdDDoUd/OjIqHk39qVwevt5SpmD+obJo7F+X1dF\ngNl8bHeYqhkR/DhAXBz+jc99lZnmdXkHq/pjxE7uwpD51w/pBf8Ve6gL5wc1TB5v\nbdWxze9VZSCDX/5Qhvgl5FQKXdo09eLiZBnUG11ZOUybGyPIfbgq9XoEzi7Fbh9t\nEQTmtiYpVSboEl9Df+5WcidCrYA3h3+cduk2B+j6SMkccqfkKvOyobXnD4v0WbA3\n7qNdvQzV7Gic/lnFxfGe4ffa2O9SsYeWUz+sXSYXP6+SIn8xW/LgZsKSzo0iXGTJ\nSkxo97lr2mNJFXzxiJ/2gNQN501HIZJJ1qXB4tNwjQKBgQDG+AjhwNINiNgbmV3H\nuecox/fQBCA8KHmMk5TPwQUjeMdf7XsLQtjfIJxSZN5TAieiVpv8v+5+yveIMRJ4\nzESPouUXgCnwCA+MNpkwwy5Ml5Jl9irXnajTbE5rpLkMYSbm1vwkGIsXBfJowohg\nwUdaXiFCcqyIUDmawds78A9fhQKBgQC+y10lvOxVoPX9om6UShYeyMbnlUsTooYA\no+SpE9tIl88B0PR3lJgH7dKpx10GE/QQV2ipnDyLe87gXPe2DJquXBvHWq+Hi4gJ\nJUYCBWNAlktZ561soFN0Q9475ai9RKaF9qM1RNSCNlkKUMgbTJo5m9tUBSuJy3x3\nO6pMQbBH/wKBgQCqGxiM2Ws8Qwhv4Bj7TobAqOXHJB/jDr+MXghV7jHUd8gMzV3q\n7MW5TYoYL0CcOzVjZySJXBYstJ4YA8xFFm5vVtcB1oMEQf/44hzqQZRtyxBQt7s9\nB/90ch5BjVzfppe5t4dt3MXdcyoiQl6SSewU6HEK/DthdyUomCA1CDI8eQKBgQCN\nx9fPXGYPd851DYi435kyhSbyHwosbCDCRwh78IqKlm05P0r7tcuIUN20Vrc09gzv\nO9VF/Rks2fMw3UUi3pjvqvjlmulHg5OyoCU3CUPpUgZqp/RC/Z0mj+yMfCx5gZNx\nh4de5Wg53yMpvEAHsVQGLWC+Ph1Nh45VmFwD0OirhwKBgGreAROMIl8zY9FpSG73\nmmRB1Bt4YEScQzx0A3zagALYA6uG/jrFJVdP63qSbcX++x7k1wcIChvENGHcbJm9\nkfXe9PcXm0pbL8Z/7Qg74TFYmlfMu+/KiajttILJ1I/9WECcgzUdAK/q1k3QgoOP\noxoe8Rw07f+iGWwKpfcn+CDk\n-----END PRIVATE KEY-----\n",
+  "client_email": "vmora-523@vmora-sps-spring20.iam.gserviceaccount.com",
+  "client_id": "114085323336547219098",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vmora-523%40vmora-sps-spring20.iam.gserviceaccount.com"
+}

@@ -89,3 +89,43 @@ function createListElement(text) {
   liElement.innerText = text;
   return liElement;
 }
+
+/** Translates the comments and resends the GET request */
+function requestTranslation() {
+        //const text = document.getElementById('data-container').value;
+        const languageCode = document.getElementById('languageCode').value;
+        const result = document.getElementById('result');
+        //const resultContainer = document.getElementById('result');
+        //resultContainer.innerText = 'Loading...';
+console.log(languageCode);
+        const params = new URLSearchParams();
+        //params.append('text', text);
+        params.append('languageCode', languageCode);
+
+        //params = '/data?'.append(params.toString());
+
+        fetch('/data?' + params.toString(), {
+          method: 'get',
+          body: params
+        }).then(response => response.json()).then((comList) => {
+    const comListElement = document.getElementById('result');
+    comList.forEach((line) => {
+      comListElement.appendChild(createListElement(line));
+    });
+  });
+        
+        
+        //then(response => response.text())
+        //.then((translatedMessage) => {
+         // dataContainer.innerText = translatedMessage;
+       // });
+      }
+
+
+
+
+
+
+
+
+      //<button onclick="requestTranslation();">Translate</button>
